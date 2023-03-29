@@ -2,7 +2,6 @@ repos:
   - id: /.*/
     allowed_overrides: [workflow]
     allow_custom_workflows: true
-    repo_config_file: /root/iac-2/atlantis.yaml
     pre_workflow_hooks:
       - run: "cat  /root/iac-2/atlantis.yaml > atlantis.yaml"
 
