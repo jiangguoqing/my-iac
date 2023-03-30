@@ -1,8 +1,8 @@
 version: 3
 projects:
-- name: poc
+- name: terragrunt
   dir: ./non-prod/sgp-southeast-1/dev/ec2/
-  workspace: poc 
+  workspace: terragrunt 
   workflow: terragrunt
   autoplan:
     enabled: true  
