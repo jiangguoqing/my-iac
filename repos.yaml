@@ -24,19 +24,21 @@ workflows:
       - apply
   
   terragrunt:
-    init:
-      steps:
-      - env:
-          name: TF_WORKSPACE
-          command: echo $WORKSPACE
-      - run: terragrunt init 
+#    init:
+#      steps:
+#      - env:
+#          name: TF_WORKSPACE
+#          command: echo $WORKSPACE
+#      - run: terragrunt init 
 
     plan:
       steps:
+      - init:
+          extra_args: ["-upgrade"]
       - env:
           name: TF_WORKSPACE
           command: echo $WORKSPACE
-      - run: terragrunt init ; terragrunt plan -input=false -no-color
+      - run: terragrunt plan -input=false -no-color
 
     apply:
       steps:
