@@ -2,7 +2,7 @@ version: 3
 projects:
 - name: dev
   dir: ./non-prod/sgp-southeast-1/dev/ec2/
-  workspace: dev
+  workspace: default
   workflow: terragrunt
   autoplan:
     enabled: true  
