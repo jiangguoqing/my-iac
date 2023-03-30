@@ -36,8 +36,7 @@ workflows:
       - env:
           name: TF_WORKSPACE
           command: echo $WORKSPACE
-      - init:
-          extra_args: ["-upgrade"]
+      - run: terraform init -input=false -no-color
       - run: terragrunt plan -input=false -no-color
 
     apply:
