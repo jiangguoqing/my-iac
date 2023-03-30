@@ -24,6 +24,13 @@ workflows:
       - apply
   
   terragrunt:
+    init:
+      steps:
+      - env:
+          name: TF_WORKSPACE
+          command: echo $WORKSPACE
+      - run: terragrunt init 
+
     plan:
       steps:
       - env:
