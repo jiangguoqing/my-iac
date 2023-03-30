@@ -33,11 +33,11 @@ workflows:
 
     plan:
       steps:
-      - init:
-          extra_args: ["-upgrade"]
       - env:
           name: TF_WORKSPACE
           command: echo $WORKSPACE
+      - init:
+          extra_args: ["-upgrade"]
       - run: terragrunt plan -input=false -no-color
 
     apply:
