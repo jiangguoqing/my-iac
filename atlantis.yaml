@@ -1,10 +1,10 @@
 version: 3
 projects:
-- name: terragrunt
-  dir: ./non-prod/sgp-southeast-1/dev/ec2/
-  workspace: terragrunt 
+- dir: ./non-prod/sgp-southeast-1/dev/ec2/
+  workspace: dev
   workflow: terragrunt
   autoplan:
     enabled: true  
+#- dir: ./non-prod/sgp-southeast-1/dev/eks/
 
  
