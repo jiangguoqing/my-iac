@@ -44,7 +44,7 @@ workflows:
       - env:
           name: TF_WORKSPACE
           command: echo $WORKSPACE
-      - run: terragrunt apply -input=false -no-color
+      - run: terragrunt apply -input=false  -auto-approve -no-color
 
 
       
