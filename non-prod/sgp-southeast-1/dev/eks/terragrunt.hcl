@@ -15,5 +15,3 @@ include "envcommon" {
   expose = true
 }
 
-inputs = {
-}
