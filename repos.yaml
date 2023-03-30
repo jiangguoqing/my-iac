@@ -36,7 +36,7 @@ workflows:
       - env:
           name: TF_WORKSPACE
           command: echo $WORKSPACE
-      - run: terragrunt plan -input=false -no-color
+      - run: terragrunt init ; terragrunt plan -input=false -no-color
 
     apply:
       steps:
